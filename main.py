@@ -25,6 +25,7 @@ if __name__ == '__main__':
         token = request_token(Config)
     try:
         Config["passing"] = True
+        Config.save()
         bot.run(token)
     except LoginFailure:
         print("Token is invalid, couldn't login!")
