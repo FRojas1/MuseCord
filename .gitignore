@@ -22,3 +22,6 @@ build/
 env/
 venv/
 ENV/
+
+# Required binaries / executables
+*.exe

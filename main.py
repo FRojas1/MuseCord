@@ -1,4 +1,4 @@
-import discord
+from MuseCord import musecord
 from discord.errors import *
 
 from config import Config as confClass
@@ -14,7 +14,6 @@ def request_token(_config: confClass):
 
 
 if __name__ == '__main__':
-    bot = discord.Bot()
     Config = confClass()
     if Config["passing"]:
         try:
@@ -26,7 +25,7 @@ if __name__ == '__main__':
     try:
         Config["passing"] = True
         Config.save()
-        bot.run(token)
+        musecord.run(token)
     except LoginFailure:
         print("Token is invalid, couldn't login!")
         Config["passing"] = False
