@@ -1,6 +1,7 @@
 import discord
 from discord.errors import *
 from config import Config as confClass
+from yt_dlp import YoutubeDL
 
 
 class MuseCord(discord.Bot):
